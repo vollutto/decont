@@ -97,6 +97,9 @@ When complete, your pipeline should be able to automatically do the following (l
 - Align the adapter-free reads to the contaminants genome, telling star to output the non-aligned reads in FastQ format (also with star)
 - Create a log file with information on trimming and alignment results
 
+> Start by looking a the "scripts/pipeline.sh" script, which is the entry point
+> for the pipeline execution.
+
 > The scripts contain comments to guide you in the tasks you need to perform.
 > Look for the *#TODO* comments, which indicate parts that need to be modified.
 
