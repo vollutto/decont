@@ -30,5 +30,5 @@ done
 
 # TODO: create a log file containing information from cutadapt and star logs
 # (this should be a single log file, and information should be *appended* to it on each run)
-# - cutadapt: Reads with adapters and Total basepairs
+# - cutadapt: Reads with adapters and total basepairs
 # - star: Percentages of uniquely mapped reads, reads mapped to multiple loci, and to too many loci
