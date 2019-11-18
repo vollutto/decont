@@ -16,10 +16,10 @@ do
     bash scripts/merge_fastqs.sh data out/merged $sid
 done
 
-# TODO: run cutadapt for each merged file
+# TODO: run cutadapt for all merged files
 # cutadapt -m 18 -a TGGAATTCTCGGGTGCCAAGG --discard-untrimmed -o <trimmed_file> <input_file> > <log_file>
 
-#TODO: complete the for loop to run STAR for all trimmed files
+#TODO: run STAR for all trimmed files
 for fname in out/trimmed/*.fastq.gz
 do
     # you will need to obtain the sample ID from the filename
