@@ -7,6 +7,7 @@ for url in $(cat data/urls) #TODO
 do
     bash scripts/download.sh $url data
 done
+#bonus: wget -i data/urls -P data/
 
 # Download the contaminants fasta file, and uncompress it
 echo "Downloading the contaminants fasta files and uncompress it..."
