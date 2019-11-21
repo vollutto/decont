@@ -6,8 +6,8 @@ dir=$2
 name=$(basename $url)
 if [ "$3"=="yes" ]
 then
-  wget -P $dir $url
+  wget -P -nc $dir $url
   gunzip -k $dir/$name
 else
-  wget -P $dir $url
+  wget -P -nc $dir $url
 fi
