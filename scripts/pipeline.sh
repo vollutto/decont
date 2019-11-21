@@ -44,6 +44,7 @@ do
 done
 
 # TODO: create a log file containing information from cutadapt and star logs
+echo "Creating the log file..."
 for sid in $(ls log/cutadapt/*.log | cut -d"." -f1 | sed 's:log/cutadapt/::' | sort)
 do
         echo >> log/pipeline.log
@@ -58,6 +59,8 @@ do
         cat out/star/${sid}/Log.final.out | grep "% of reads mapped to multiple loci" >> log/pipeline.log
         cat out/star/${sid}/Log.final.out | grep "% of reads mapped to too many loci" >> log/pipeline.log
 done
+
+echo "DONE!"
 
 # (this should be a single log file, and information should be *appended* to it on each run)
 # - cutadapt: Reads with adapters and total basepairs
