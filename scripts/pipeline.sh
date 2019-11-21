@@ -15,10 +15,11 @@ gunzip -k res/contaminants.fasta.gz #TODO
 
 # Index the contaminants file
 echo "Running index..."
-bash scripts/index.sh res/contaminants.fasta res/contaminants_idx
+bash scripts/index.sh res/contaminants.fasta res/contaminants_idx/
 
 # Merge the samples into a single file
 echo "Running Merge..."
+mkdir -p out/merged
 for sid in $(ls data/*.fastq.gz | cut -d"-" -f1 | sed 's:data/::' | sort | uniq) #TODO
 do
    bash scripts/merge_fastqs.sh data out/merged $sid
