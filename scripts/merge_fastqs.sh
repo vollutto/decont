@@ -4,5 +4,4 @@
 dir=$1
 output=$2
 sid=$3
-mkdir -p out/merged
 cat  $1/$3*.fastq.gz > $2/$3.fastq.gz
